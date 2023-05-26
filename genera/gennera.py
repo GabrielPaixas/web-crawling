@@ -7,8 +7,8 @@ import os
 
 load_dotenv()
 
-USUARIO = ""
-SENHA = ""
+USUARIO = os.getenv('USUARIO')
+SENHA = os.getenv('SENHA')
 
 firefox_driver = webdriver.Firefox()
 firefox_driver.get("https://apps.gennera.com.br/public/#/login")
