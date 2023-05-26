@@ -7,7 +7,7 @@ import os
 
 load_dotenv()
 
-USUARIO = "gabriel.paixao@somosicev.com"
+USUARIO = ""
 SENHA = ""
 
 firefox_driver = webdriver.Firefox()
