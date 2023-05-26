@@ -7,8 +7,8 @@ import os
 
 load_dotenv()
 
-USUARIO = os.getenv('USUARIO')
-SENHA = os.getenv('SENHA')
+usuario = os.getenv('USUARIO')
+senha = os.getenv('SENHA')
 
 firefox_driver = webdriver.Firefox()
 firefox_driver.get("https://apps.gennera.com.br/public/#/login")
@@ -21,7 +21,7 @@ wait = WebDriverWait(firefox_driver, 10)
 #set value to input
 inputlogin = wait.until(EC.visibility_of_element_located(("xpath", "/html/body/div[2]/div[2]/div[2]/div[3]/form/div/input")))
 inputlogin.clear()
-inputlogin.send_keys(USUARIO)
+inputlogin.send_keys(usuario)
 
 bottom_pass = wait.until(EC.visibility_of_element_located(("xpath", "/html/body/div[2]/div[2]/div[2]/div[3]/button/div[2]/span")))
 bottom_pass.click()
@@ -30,7 +30,7 @@ firefox_driver.implicitly_wait(10)
 
 inputpassword = wait.until(EC.visibility_of_element_located(("xpath", "/html/body/div[2]/div[2]/div[2]/div[5]/div[1]/input")))
 inputpassword.clear()
-inputpassword.send_keys(SENHA)
+inputpassword.send_keys(senha)
 
 bottom_login = wait.until(EC.visibility_of_element_located(("xpath", "/html/body/div[2]/div[2]/div[2]/div[5]/button")))
 bottom_login.click()
